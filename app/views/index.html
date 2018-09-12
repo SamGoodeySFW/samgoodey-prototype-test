@@ -1,0 +1,64 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Testing
+      </h1>
+      <!--
+      <form action="/waste-submit" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Please input fields to be passed onto the next page
+            </h2>
+          </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="first-field">
+                Household Waste
+              </label>
+              <input class="govuk-input" id="first-field" name="first-field" type="text">
+              <div class="govuk-!-padding-bottom-5"></div>
+              <label class="govuk-label" for="second-field">
+                Gas Discharge Lamps and LED Light Sources
+              </label>
+              <input class="govuk-input" id="second-field" name="second-field" type="text">
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Submit</button>
+      </form>
+    -->
+      <h1 class="govuk-heading-xl">Question 1</h1>
+        {{ govukTable({
+          caption: "Enter data into table",
+          firstCellIsHeader: true,
+          head: [
+            {
+              text: "Amount"
+            }
+          ],
+          rows: myData
+        })}}
+        <form class="form" action="/my-first-table" method="POST">
+          {{ govukInput({
+            label: {
+              text: "Enter amount"
+            },
+            id: "reg-amount",
+            name: "reg-amount"
+          })}}
+          <button class="govuk-button">Add</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

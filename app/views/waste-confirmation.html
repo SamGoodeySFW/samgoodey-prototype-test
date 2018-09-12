@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Please see below for waste confirmation
+        </h1>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Waste Type</th>
+                    <th class="govuk-table__header" scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Household</th>
+                    <th class="govuk-table__header" scope="col">{{data['first-field']}}</th>       
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Gas Discharge Lamps and LED Light Sources</th>
+                    <th class="govuk-table__header" scope="col">{{data['second-field']}}</th>       
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
